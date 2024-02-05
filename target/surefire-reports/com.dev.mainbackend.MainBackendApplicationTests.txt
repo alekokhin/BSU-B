@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: com.dev.mainbackend.MainBackendApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.702 s <<< FAILURE! - in com.dev.mainbackend.MainBackendApplicationTests
+contextLoads  Time elapsed: 0.011 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: java.lang.IllegalStateException: java.lang.IllegalStateException: Could not initialize Java logging from log4j2.properties
+Caused by: java.lang.IllegalStateException: Could not initialize Java logging from log4j2.properties
+Caused by: java.io.FileNotFoundException: C:\Users\user\Desktop\main-back\BSU-B\log4j2.properties (The system cannot find the file specified)
+

@@ -1,0 +1,186 @@
+2024-02-04 20:58:05 WARN [l-1 housekeeper] HikariPool: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=5d5h30m39s42ms131µs400ns).
+2024-02-04 21:03:53 INFO [nio-8080-exec-6] AuthController: auth user -> aleko
+2024-02-04 21:06:20 INFO [io-8080-exec-10] JwtUtils: JWT token is expired: JWT expired at 2024-02-04T21:05:34Z. Current time: 2024-02-04T21:06:20Z, a difference of 46308 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-02-04 21:06:20 ERROR [io-8080-exec-10] AuthController: Test yle: JWT expired at 2024-02-04T21:05:34Z. Current time: 2024-02-04T21:06:20Z, a difference of 46332 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-02-04 21:06:20 ERROR [io-8080-exec-10] [dispatcherServlet]: Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
+java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.get(Optional.java:143)
+	at com.dev.mainbackend.controllers.AuthController.refreshToken(AuthController.java:89)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1072)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:111)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:337)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:115)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:122)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:126)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:81)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:109)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:149)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at com.dev.mainbackend.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:48)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:103)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:89)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:91)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:112)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:82)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:55)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:346)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:221)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:186)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:354)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:267)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:178)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:481)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:130)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:926)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1790)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1589)
+2024-02-04 21:07:22 INFO [ionShutdownHook] HikariDataSource: HikariPool-1 - Shutdown initiated...
+2024-02-04 21:07:22 INFO [ionShutdownHook] HikariDataSource: HikariPool-1 - Shutdown completed.
+2024-02-04 21:07:41 INFO [main] MainBackendApplication: Starting MainBackendApplication using Java 19 on WIN-25SGSAVQIO3 with PID 16316 (C:\Users\user\Desktop\main-back\BSU-B\target\classes started by user in C:\Users\user\Desktop\main-back)
+2024-02-04 21:07:41 INFO [main] MainBackendApplication: No active profile set, falling back to 1 default profile: "default"
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.en.AnalyzedTextRepositoryEn; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.en.ItemRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.en.StringRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.en.SymbolRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.en.WordRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.ge.AnalyzedTextRepositoryGe; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.ge.ItemRepositoryGe; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.ge.StringRepositoryGe; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.ge.SymbolRepositoryGe; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.ge.WordRepositoryGe; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 276 ms. Found 1 JPA repository interfaces.
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationDelegate: Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-02-04 21:07:44 INFO [main] RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 81 ms. Found 11 MongoDB repository interfaces.
+2024-02-04 21:07:46 INFO [main] TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2024-02-04 21:07:46 INFO [main] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-04 21:07:46 INFO [main] StandardService: Starting service [Tomcat]
+2024-02-04 21:07:46 INFO [main] StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-02-04 21:07:46 INFO [main] [/]: Initializing Spring embedded WebApplicationContext
+2024-02-04 21:07:46 INFO [main] ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 4877 ms
+2024-02-04 21:07:47 INFO [main] client: MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/19+36-2238"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@66bf40e5]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2024-02-04 21:07:47 INFO [localhost:27017] connection: Opened connection [connectionId{localValue:1, serverValue:268}] to localhost:27017
+2024-02-04 21:07:47 INFO [localhost:27017] connection: Opened connection [connectionId{localValue:2, serverValue:269}] to localhost:27017
+2024-02-04 21:07:47 INFO [localhost:27017] cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=51828900}
+2024-02-04 21:07:49 INFO [main] DefaultSecurityFilterChain: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@984de01, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@58cda03f, org.springframework.security.web.context.SecurityContextPersistenceFilter@2f86f9cf, org.springframework.security.web.header.HeaderWriterFilter@1426370c, org.springframework.web.filter.CorsFilter@7757a37f, org.springframework.security.web.authentication.logout.LogoutFilter@45d389f2, com.dev.mainbackend.security.jwt.AuthTokenFilter@282c4da0, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7e2bd5e6, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@15c16f19, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2109a691, org.springframework.security.web.session.SessionManagementFilter@1d6713dd, org.springframework.security.web.access.ExceptionTranslationFilter@6b2ef50e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@543b0737]
+2024-02-04 21:07:50 INFO [main] Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2024-02-04 21:07:50 INFO [main] TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-04 21:07:50 INFO [main] MainBackendApplication: Started MainBackendApplication in 10.171 seconds (JVM running for 12.943)
+2024-02-04 21:09:19 INFO [nio-8080-exec-1] [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-04 21:09:19 INFO [nio-8080-exec-1] DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2024-02-04 21:09:19 INFO [nio-8080-exec-1] DispatcherServlet: Completed initialization in 178 ms
+2024-02-04 21:09:20 INFO [nio-8080-exec-1] HikariDataSource: HikariPool-1 - Starting...
+2024-02-04 21:09:21 INFO [nio-8080-exec-1] HikariDataSource: HikariPool-1 - Start completed.
+2024-02-04 21:09:22 INFO [nio-8080-exec-1] connection: Opened connection [connectionId{localValue:3, serverValue:270}] to localhost:27017
+2024-02-04 21:09:22 INFO [nio-8080-exec-1] AuthController: auth user -> aleko
+2024-02-04 21:13:30 INFO [nio-8080-exec-4] JwtUtils: JWT token is expired: JWT expired at 2024-02-04T21:11:02Z. Current time: 2024-02-04T21:13:30Z, a difference of 148095 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-02-04 21:13:30 ERROR [nio-8080-exec-4] AuthController: Test yle: JWT expired at 2024-02-04T21:11:02Z. Current time: 2024-02-04T21:13:30Z, a difference of 148252 milliseconds.  Allowed clock skew: 0 milliseconds.
+2024-02-04 21:13:30 INFO [nio-8080-exec-4] AuthController: invalid or empty refresh token
+2024-02-04 23:56:44 INFO [main] MainBackendApplication: Starting MainBackendApplication using Java 19 on WIN-25SGSAVQIO3 with PID 15296 (C:\Users\user\Desktop\main-back\BSU-B\target\classes started by user in C:\Users\user\Desktop\main-back)
+2024-02-04 23:56:44 INFO [main] MainBackendApplication: No active profile set, falling back to 1 default profile: "default"
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.en.AnalyzedTextRepositoryEn; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.en.ItemRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.en.StringRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.en.SymbolRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.en.WordRepository; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.ge.AnalyzedTextRepositoryGe; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.ge.ItemRepositoryGe; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.ge.StringRepositoryGe; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.ge.SymbolRepositoryGe; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationExtensionSupport: Spring Data JPA - Could not safely identify store assignment for repository candidate interface com.dev.mainbackend.repository.ge.WordRepositoryGe; If you want this repository to be a JPA repository, consider annotating your entities with one of these annotations: javax.persistence.Entity, javax.persistence.MappedSuperclass (preferred), or consider extending one of the following types with your repository: org.springframework.data.jpa.repository.JpaRepository
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 106 ms. Found 1 JPA repository interfaces.
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationDelegate: Bootstrapping Spring Data MongoDB repositories in DEFAULT mode.
+2024-02-04 23:56:45 INFO [main] RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 32 ms. Found 11 MongoDB repository interfaces.
+2024-02-04 23:56:46 INFO [main] TomcatWebServer: Tomcat initialized with port(s): 8080 (http)
+2024-02-04 23:56:46 INFO [main] Http11NioProtocol: Initializing ProtocolHandler ["http-nio-8080"]
+2024-02-04 23:56:46 INFO [main] StandardService: Starting service [Tomcat]
+2024-02-04 23:56:46 INFO [main] StandardEngine: Starting Servlet engine: [Apache Tomcat/9.0.79]
+2024-02-04 23:56:46 INFO [main] [/]: Initializing Spring embedded WebApplicationContext
+2024-02-04 23:56:46 INFO [main] ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 2220 ms
+2024-02-04 23:56:46 INFO [main] client: MongoClient with metadata {"driver": {"name": "mongo-java-driver|sync|spring-boot", "version": "4.6.1"}, "os": {"type": "Windows", "name": "Windows 10", "architecture": "amd64", "version": "10.0"}, "platform": "Java/Oracle Corporation/19+36-2238"} created with settings MongoClientSettings{readPreference=primary, writeConcern=WriteConcern{w=null, wTimeout=null ms, journal=null}, retryWrites=true, retryReads=true, readConcern=ReadConcern{level=null}, credential=null, streamFactoryFactory=null, commandListeners=[], codecRegistry=ProvidersCodecRegistry{codecProviders=[ValueCodecProvider{}, BsonValueCodecProvider{}, DBRefCodecProvider{}, DBObjectCodecProvider{}, DocumentCodecProvider{}, IterableCodecProvider{}, MapCodecProvider{}, GeoJsonCodecProvider{}, GridFSFileCodecProvider{}, Jsr310CodecProvider{}, JsonObjectCodecProvider{}, BsonCodecProvider{}, EnumCodecProvider{}, com.mongodb.Jep395RecordCodecProvider@5a515e5d]}, clusterSettings={hosts=[localhost:27017], srvServiceName=mongodb, mode=SINGLE, requiredClusterType=UNKNOWN, requiredReplicaSetName='null', serverSelector='null', clusterListeners='[]', serverSelectionTimeout='30000 ms', localThreshold='30000 ms'}, socketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=0, receiveBufferSize=0, sendBufferSize=0}, heartbeatSocketSettings=SocketSettings{connectTimeoutMS=10000, readTimeoutMS=10000, receiveBufferSize=0, sendBufferSize=0}, connectionPoolSettings=ConnectionPoolSettings{maxSize=100, minSize=0, maxWaitTimeMS=120000, maxConnectionLifeTimeMS=0, maxConnectionIdleTimeMS=0, maintenanceInitialDelayMS=0, maintenanceFrequencyMS=60000, connectionPoolListeners=[], maxConnecting=2}, serverSettings=ServerSettings{heartbeatFrequencyMS=10000, minHeartbeatFrequencyMS=500, serverListeners='[]', serverMonitorListeners='[]'}, sslSettings=SslSettings{enabled=false, invalidHostNameAllowed=false, context=null}, applicationName='null', compressorList=[], uuidRepresentation=JAVA_LEGACY, serverApi=null, autoEncryptionSettings=null, contextProvider=null}
+2024-02-04 23:56:46 INFO [localhost:27017] connection: Opened connection [connectionId{localValue:2, serverValue:271}] to localhost:27017
+2024-02-04 23:56:46 INFO [localhost:27017] connection: Opened connection [connectionId{localValue:1, serverValue:272}] to localhost:27017
+2024-02-04 23:56:46 INFO [localhost:27017] cluster: Monitor thread successfully connected to server with description ServerDescription{address=localhost:27017, type=STANDALONE, state=CONNECTED, ok=true, minWireVersion=0, maxWireVersion=21, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=56206600}
+2024-02-04 23:56:47 INFO [main] DefaultSecurityFilterChain: Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@25109608, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1d637673, org.springframework.security.web.context.SecurityContextPersistenceFilter@64b73e0a, org.springframework.security.web.header.HeaderWriterFilter@15c16f19, org.springframework.web.filter.CorsFilter@2913ca3e, org.springframework.security.web.authentication.logout.LogoutFilter@7e2bc2f4, com.dev.mainbackend.security.jwt.AuthTokenFilter@720f56e2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@3b57f915, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@39c7fb0b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@636dbfe7, org.springframework.security.web.session.SessionManagementFilter@3db1ce78, org.springframework.security.web.access.ExceptionTranslationFilter@8432469, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@79cdf2d4]
+2024-02-04 23:56:48 INFO [main] Http11NioProtocol: Starting ProtocolHandler ["http-nio-8080"]
+2024-02-04 23:56:48 INFO [main] TomcatWebServer: Tomcat started on port(s): 8080 (http) with context path ''
+2024-02-04 23:56:48 INFO [main] MainBackendApplication: Started MainBackendApplication in 4.497 seconds (JVM running for 6.437)
+2024-02-04 23:59:14 INFO [nio-8080-exec-1] [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-02-04 23:59:14 INFO [nio-8080-exec-1] DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+2024-02-04 23:59:14 INFO [nio-8080-exec-1] DispatcherServlet: Completed initialization in 94 ms
+2024-02-04 23:59:15 INFO [nio-8080-exec-4] HikariDataSource: HikariPool-1 - Starting...
+2024-02-04 23:59:15 INFO [nio-8080-exec-4] HikariDataSource: HikariPool-1 - Start completed.
+2024-02-04 23:59:15 INFO [nio-8080-exec-4] connection: Opened connection [connectionId{localValue:3, serverValue:273}] to localhost:27017
+2024-02-04 23:59:16 INFO [nio-8080-exec-4] AuthController: auth user -> aleko

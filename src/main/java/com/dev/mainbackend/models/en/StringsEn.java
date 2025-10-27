@@ -3,13 +3,12 @@ package com.dev.mainbackend.models.en;
 import com.dev.mainbackend.request.StringsRequests;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Data
 @Document(collection = "strings-en")
@@ -23,7 +22,7 @@ public class StringsEn {
     private List<MultipartFile> newImages = new ArrayList<>();
 
 
-    public StringsEn(String title, String description, String connection, List<String> images,List<MultipartFile> newImages) {
+    public StringsEn(String title, String description, String connection, List<String> images, List<MultipartFile> newImages) {
         this.title = title;
         this.description = description;
         this.connection = connection;
@@ -34,7 +33,8 @@ public class StringsEn {
 
     public StringsEn() {
     }
-    public StringsEn(StringsRequests stringsRequests){
+
+    public StringsEn(StringsRequests stringsRequests) {
         copyProperties(stringsRequests);
         setNewImages(null);
 

@@ -2,19 +2,16 @@ package com.dev.mainbackend.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-import javax.persistence.*;
-import java.util.List;
-
-@Entity
 @Data
+@Document(collection = "users")
 public class Users {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     private String _id; // Use Long instead of String for the id
 
-    @Column(unique = true)
     private String username;
 
     @JsonIgnore

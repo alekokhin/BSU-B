@@ -3,13 +3,12 @@ package com.dev.mainbackend.models.ge;
 import com.dev.mainbackend.request.SymbolsRequests;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Data
 @Document(collection = "symbols-ge")
@@ -23,7 +22,7 @@ public class SymbolsGe {
     private List<MultipartFile> newImages = new ArrayList<>();
 
 
-    public SymbolsGe(String title, String description, String connection,List<String> images,List<MultipartFile> newImages) {
+    public SymbolsGe(String title, String description, String connection, List<String> images, List<MultipartFile> newImages) {
         this.title = title;
         this.description = description;
         this.connection = connection;

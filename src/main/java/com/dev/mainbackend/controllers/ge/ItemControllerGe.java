@@ -72,6 +72,7 @@ public class ItemControllerGe {
     public ResponseEntity<Resource> serveImage(@PathVariable String fileName) throws IOException {
         Resource resource = imageService.getImageResource(fileName);
 
+
         return ResponseEntity.ok()
                 .header(HttpHeaders.CONTENT_TYPE, "image/png") // Set the appropriate content type
                 .body(resource);

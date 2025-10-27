@@ -3,10 +3,10 @@ package com.dev.mainbackend.models.en;
 import com.dev.mainbackend.request.ItemsRequests;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.persistence.Id;
 import java.util.*;
 
 @Data

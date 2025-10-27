@@ -3,9 +3,8 @@ package com.dev.mainbackend.models.ge;
 import com.dev.mainbackend.request.AnalyzedTextRequests;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-import javax.persistence.Id;
 
 @Data
 @Document(collection = "analyzed-text-ge")

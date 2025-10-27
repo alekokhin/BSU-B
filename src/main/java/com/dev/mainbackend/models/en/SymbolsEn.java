@@ -6,15 +6,12 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Data
 @Document(collection = "symbols-en")
 public class SymbolsEn {
-    @Id
     private String id;
     private String title;
     private String description;

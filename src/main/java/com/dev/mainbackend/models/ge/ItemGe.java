@@ -3,14 +3,13 @@ package com.dev.mainbackend.models.ge;
 import com.dev.mainbackend.request.ItemsRequests;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import java.util.Map;
 
 @Data
 @Document(collection = "item-ge")
@@ -43,7 +42,7 @@ public class ItemGe {
     }
 
     public ItemGe(String title, String description, Date date,
-                  List<String> images,List<MultipartFile> newImages, String security,
+                  List<String> images, List<MultipartFile> newImages, String security,
                   String damaged, String color,
                   String structure, String reWriteDate,
                   String reWritePlace, String paperCount,
